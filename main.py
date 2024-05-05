@@ -1,4 +1,4 @@
-#funcinal Prompts
+#functional Prompts
 # Implement a function that will flatten and sort an array of integers in ascending order, and which adheres to a functional programming paradigm
 
 def main():
@@ -10,7 +10,18 @@ def main():
     print(user_input)
     print(sort_and_flatten(user_input))
 
-
+def sort_and_flatten(array):
+    array = [array]
+    for item in array:
+        for i in range(len(item)):
+            array.append(item[i])
+            return sorted(array)
+        
+ # this code does not ensure data immutability, it modifies the original array passing by reference
+# this solution is a not a pure function, it modifies the original array passed by reference. This is a side effect and and violates the principle of modifying the original array
+#  the function "sort_and_flatten" is not a higher order function because it does not return a value, it modifies the original array passed by
+# Yes, using a different programing style would be more appropriate to solve this problem
+# Functional programming is helpful with solveing problems like flattening and sorting nested lists because of the emphasis on immutability on immutablity, ans higher order functions.
 
 
     # OOP - Object Oriented Prompts
@@ -55,3 +66,9 @@ def main():
     print("anakins_pod.max_speed:", anakins_pod.max_speed)
     print("sebulas_pod.condition:", sebulas_pod.condition)
     print("sebulas_pod.price:", sebulas_pod.price)
+
+# this code demonstrates Encapsulation "Podracers" class encapsulates the attributes and methods of the Podracers class
+# this code demonstrates Inheritance "AnakinsPod" and "SebulasPod" classes
+# this code demonstrates Polymorphism "AnakinsPod" and "SebulasPod"
+# this code demonstrates Abstraction "AnakinsPod" and "SebulasPod"
+# OOP - Object Oriented Prompts assisted by the "AnakinsPod" and "SebulasPod"
